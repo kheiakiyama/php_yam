@@ -34,6 +34,10 @@ class Yammer
 		return $this->get('/api/v1/messages', $options);
 	}
 
+	public function messages_in_group($id, $options = array()) {
+		return $this->get('/api/v1/messages/in_group/' . $id, $options);
+	}
+
 	public function messages_in_thread($id, $options = array()) {
 		return $this->get('/api/v1/messages/in_thread/' . $id, $options);
 	}
